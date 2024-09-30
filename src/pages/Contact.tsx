@@ -1,10 +1,10 @@
 import React from "react";
-
 import Layout from "../components/Layout";
-export default function HomePage() {
+
+export default function Contact() {
   return (
     <Layout>
-      <div>content</div>
+      <div>Contact</div>
     </Layout>
   );
 }

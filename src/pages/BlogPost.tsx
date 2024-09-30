@@ -3,8 +3,9 @@ import { useParams, useNavigate } from "react-router-dom";
 import { client } from "../utils/sanity/client";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
+import Layout from "../components/Layout";
 
-import "../styles/BlogPost.css"
+import "../styles/BlogPost.css";
 
 // Define types for the post data
 interface Post {
@@ -61,27 +62,29 @@ export default function BlogPost() {
   if (!postData) return <div>Loading...</div>;
 
   return (
-    <article>
-      <div className="article-page bg-black min-h-screen text-white p-12">
-        <div className="container mx-auto px-6 md:px-16 lg:px-32 py-8 prose prose-dark">
-          <button
-            className="text-purple-500 hover:underline absolute top-4 right-4"
-            onClick={() => navigate("/")}
-          >
-            Close
-          </button>
-          <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
-          <p className="text-sm text-gray-400 mb-8">
-            {new Date(postData.publishedAt).toDateString()}
-          </p>
-          <BlockContent
-            blocks={postData.body}
-            serializers={serializers}
-            projectId="yourProjectId"
-            dataset="yourDataset"
-          />
+    <Layout>
+      <article>
+        <div className="article-page bg-black min-h-screen text-white p-12">
+          <div className="container mx-auto px-6 md:px-16 lg:px-32 py-8 prose prose-dark">
+            <button
+              className="text-purple-500 hover:underline absolute top-4 right-4"
+              onClick={() => navigate("/")}
+            >
+              Close
+            </button>
+            <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
+            <p className="text-sm text-gray-400 mb-8">
+              {new Date(postData.publishedAt).toDateString()}
+            </p>
+            <BlockContent
+              blocks={postData.body}
+              serializers={serializers}
+              projectId="yourProjectId"
+              dataset="yourDataset"
+            />
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </Layout>
   );
 }
