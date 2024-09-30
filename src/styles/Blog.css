@@ -1,0 +1,28 @@
+.article-list-container {
+    font-family: "Arial", sans-serif;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  h1 {
+    color: #c4a7e7;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  a {
+    color: #c4a7e7;
+  }
+  
+  a:hover {
+    color: #a27db5;
+  }
+  
+  .text-gray-400 {
+    color: #999999;
+  }

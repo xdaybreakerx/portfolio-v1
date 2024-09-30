@@ -1,0 +1,40 @@
+.article-page {
+    background-color: #000;
+    color: #fff;
+    font-family: "Arial", sans-serif;
+  }
+  
+  .prose h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .prose p {
+    color: #e0e0e0;
+  }
+  
+  .prose a {
+    color: #c4a7e7;
+    text-decoration: underline;
+  }
+  
+  .prose a:hover {
+    color: #a27db5;
+  }
+  
+  .text-purple-500 {
+    color: #c4a7e7;
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    color: #a27db5;
+  }
+  
