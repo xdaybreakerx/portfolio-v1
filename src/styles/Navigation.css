@@ -1,0 +1,11 @@
+/* horizontal nav */
+nav {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+
+  li {
+    display: inline;
+    padding-right: 16px;
+  }
+}

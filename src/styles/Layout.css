@@ -1,0 +1,21 @@
+/* Flexbox layout for the entire page */
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Allow the main content to grow and fill available space */
+.main-content {
+  width: 100%;
+  max-width: 80ch;
+  margin: auto;
+  flex-grow: 1;
+}
+
+/* footer sticks to the bottom */
+footer {
+  padding: 20px;
+  text-align: center;
+}
+
