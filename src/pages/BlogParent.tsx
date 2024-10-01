@@ -1,8 +1,13 @@
+// module imports
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+
+// Utils + Layout import
 import { client } from "../utils/sanity/client";
-import "../styles/BlogParent.css";
 import Layout from "../components/Layout";
+
+// Styling
+import "../styles/BlogParent.css";
 
 // Define types for the post data
 interface Post {
@@ -33,21 +38,16 @@ export default function BlogParent() {
 
   return (
     <Layout>
-      <div className="article-list-container bg-black min-h-screen text-white p-12">
-        <h1 className="text-3xl mb-8">blog</h1>
-        <ul className="space-y-4">
+      <div id="article-list">
+        <h1>blog</h1>
+        <ul id="blog-list">
           {articles.map((article) => (
             <li key={article.slug.current}>
-              <Link
-                to={`/blog/${article.slug.current}`}
-                className="text-purple-400 hover:underline"
-              >
-                <h2 className="text-xl">{article.title}</h2>
+              <Link to={`/blog/${article.slug.current}`}>
+                <h2>{article.title}</h2>
               </Link>
-              <p className="text-gray-400">
-                {new Date(article.publishedAt).toISOString().slice(0, 10)}
-              </p>
-              <p className="text-sm">{article.description}</p>
+              <p>{new Date(article.publishedAt).toISOString().slice(0, 10)}</p>
+              <p>{article.description}</p>
             </li>
           ))}
         </ul>

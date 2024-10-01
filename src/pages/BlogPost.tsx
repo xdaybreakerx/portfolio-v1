@@ -1,10 +1,14 @@
+// module imports
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
+// utils + layout import
 import { client } from "../utils/sanity/client";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
 import Layout from "../components/Layout";
 
+// styling
 import "../styles/BlogPost.css";
 
 // Define types for the post data
@@ -64,18 +68,13 @@ export default function BlogPost() {
   return (
     <Layout>
       <article>
-        <div className="article-page bg-black min-h-screen text-white p-12">
-          <div className="container mx-auto px-6 md:px-16 lg:px-32 py-8 prose prose-dark">
-            <button
-              className="text-purple-500 hover:underline absolute top-4 right-4"
-              onClick={() => navigate("/")}
-            >
+        <div id="article-page">
+          <div>
+            <button id="back-button" onClick={() => navigate("/blog")}>
               Close
             </button>
-            <h1 className="text-4xl font-bold mb-4">{postData.title}</h1>
-            <p className="text-sm text-gray-400 mb-8">
-              {new Date(postData.publishedAt).toDateString()}
-            </p>
+            <h1>{postData.title}</h1>
+            <p>{new Date(postData.publishedAt).toDateString()}</p>
             <BlockContent
               blocks={postData.body}
               serializers={serializers}
