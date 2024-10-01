@@ -1,7 +1,11 @@
+// module imports
 import React from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+// styling
 import "../styles/App.css";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// components
 import HomePage from "../pages/HomePage";
 import BlogParent from "../pages/BlogParent";
 import BlogPost from "../pages/BlogPost";

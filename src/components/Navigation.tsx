@@ -1,5 +1,9 @@
+// module imports
 import React from "react";
 import { Link } from "react-router-dom";
+
+// styling
+import "../styles/Navigation.css"
 
 export default function Header() {
   return (
