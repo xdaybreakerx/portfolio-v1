@@ -17,6 +17,14 @@ interface Post {
   description: string;
 }
 
+
+/**
+ * A React functional component that represents a parent component for displaying a list of blog articles. It fetches the blog articles using a client-side query, updates the state with the fetched data, and renders a layout with the list of articles including their title, publication date, and description. If no articles are loaded yet, it displays a loading message.
+ * @author Xander
+ *
+ * @export
+ * @returns {*} A functional component that displays a list of blog articles fetched from a client. It uses useState to manage the articles state and useEffect to fetch the articles from the client when the component mounts. The articles are then displayed in a list structure with article title, published date, and description. If no articles are loaded yet, it displays a loading message. The component is wrapped in a Layout component for styling purposes.
+ */
 export default function BlogParent() {
   const [articles, setArticles] = useState<Post[]>([]);
 

@@ -8,6 +8,14 @@ interface Project {
   url: string;
 }
 
+
+/**
+ * Function that returns a list of projects with their names, descriptions, and URLs. Displays the projects in a list format with links to their respective GitHub repositories. Includes projects such as real-time object detection tool, custom programming language interpreter, flashcard app, coffee roasters directory, and finance management API. Each project contains details like technologies used, achievements, and integration. The function also includes a message with a link to the developer's GitHub profile for more projects.
+ * @author Xander
+ *
+ * @export
+ * @returns {*} A function that returns an array of projects with details such as name, description, and URL. The projects include a real-time object detection tool, a custom programming language interpreter, a flashcard app, a coffee roaster directory, and a finance management API. The function renders a list of projects with links to their respective URLs and descriptions.
+ */
 export default function Projects() {
   // array of projects
   const projects: Project[] = [

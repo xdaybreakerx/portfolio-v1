@@ -26,7 +26,12 @@ function urlFor(source: any) {
   return builder.image(source);
 }
 
-// Define serializers for handling embedded content such as images
+/**
+ * A property that defines different serializers for different types of data. It includes a serializer for the 'image' type which takes props as input and returns an image element with specified URL, alt text, and class name.
+ * @author Xander
+ *
+ * @type {{ types: { image: (props: any) => any; }; }}
+ */
 const serializers = {
   types: {
     image: (props: any) => (
@@ -39,6 +44,14 @@ const serializers = {
   },
 };
 
+
+/**
+ * Creates a functional component BlogPost that fetches a specific blog post data based on the provided slug param. Renders the blog post details including title, published date, body, and main image. Provides a button to navigate back to the blog page. Displays a loading message while fetching data. Utilizes client to fetch data, useParams to get the slug param, useNavigate for navigation, useState to manage post data state, and useEffect to fetch data on component mount.
+ * @author Xander
+ *
+ * @export
+ * @returns {*} A function component that renders a blog post based on the slug parameter. It fetches the post data using the 'slug' provided and displays the post title, body, main image, and published date. It includes a back button to navigate back to the blog page and shows a loading indicator while fetching data.
+ */
 export default function BlogPost() {
   const { slug } = useParams<{ slug: string }>();
   const navigate = useNavigate();

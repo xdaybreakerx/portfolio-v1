@@ -11,6 +11,13 @@ import BlogParent from "../pages/BlogParent";
 import BlogPost from "../pages/BlogPost";
 import Contact from "../pages/Contact";
 
+
+/**
+ * An instance of a router created using createBrowserRouter with specific routes defined for the home page, blog page, blog post page, and contact page.
+ * @author Xander
+ *
+ * @type {*}
+ */
 const appRouter = createBrowserRouter([
   {
     path: "/",

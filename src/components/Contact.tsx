@@ -1,7 +1,14 @@
 // module imports
 import React from "react";
-import { Link } from "react-router-dom";
 
+
+/**
+ * A function that renders a contact section with information on how to contact the author through email. It also provides links to the author's GitHub, LinkedIn, and CV.
+ * @author Xander
+ *
+ * @export
+ * @returns {*} A function that returns contact information including email, GitHub, LinkedIn, and CV links.
+ */
 export default function Contact() {
   return (
     <>
