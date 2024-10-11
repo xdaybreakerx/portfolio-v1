@@ -24,28 +24,22 @@ export default function Projects() {
       url: "https://github.com/xdaybreakerx/go-interpreter",
     },
     {
-      name: "Finance Management API | Python, Flask, PostgreSQL, Neon.tech",
-      description:
-        "Built a Flask-based API for secure CRUD operations, managing user accounts, transactions, and categorising expenses. Integrated PostgreSQL via Neon for scalability and optimised database performance. Security focus with JWT-based authentication, input sanitisation, and error handling.",
-      url: "https://github.com/xdaybreakerx/finance-management-api/",
-    },
-    {
-      name: "BeanFinder | Astro, Tailwind CSS, JavaScript",
-      description:
-        "Developed a responsive directory of Australian coffee roasters with dynamic filtering and pagination. Integrated Google Maps and SEO optimisation using Astro and React hooks. Deployed on Netlify, leveraging continuous deployment for fast iteration.",
-      url: "https://github.com/xdaybreakerx/beanfinder.coffee",
-    },
-    {
-      name: "Barbarian TTRPG Dice Roller | Python, JavaScript",
-      description:
-        "Built a terminal app for D&D players, automating dice rolls and tracking Barbarian class features. Recreated Avare for Python in JavaScript, available via npm-js for custom and standardised dice roll syntax.",
-      url: "https://github.com/xdaybreakerx/barbarian-dnd-dice-roller",
-    },
-    {
       name: "QuizQuokka | React, Tailwind CSS, ShadCN, Firebase",
       description:
         "Built a responsive flashcard app for mastering Data Structures, Algorithms, Python, JavaScript, and React. Integrated AI explanations via Llama 3 with user authentication through Firebase Auth for custom flashcard creation. Styled with TailwindCSS and ShadCN, deployed on Netlify with Firebase backend, Firestore database, and serverless functions.",
       url: "https://github.com/xdaybreakerx/quizquokka",
+    },
+    {
+      name: "BeanFinder | Astro, Tailwind CSS, JavaScript",
+      description:
+      "Developed a responsive directory of Australian coffee roasters with dynamic filtering and pagination. Integrated Google Maps and SEO optimisation using Astro and React hooks. Deployed on Netlify, leveraging continuous deployment for fast iteration.",
+      url: "https://github.com/xdaybreakerx/beanfinder.coffee",
+    },
+    {
+      name: "Finance Management API | Python, Flask, PostgreSQL, Neon.tech",
+      description:
+        "Built a Flask-based API for secure CRUD operations, managing user accounts, transactions, and categorising expenses. Integrated PostgreSQL via Neon for scalability and optimised database performance. Security focus with JWT-based authentication, input sanitisation, and error handling.",
+      url: "https://github.com/xdaybreakerx/finance-management-api/",
     },
   ];
 
