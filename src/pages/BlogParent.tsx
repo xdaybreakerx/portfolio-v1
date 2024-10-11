@@ -34,23 +34,27 @@ export default function BlogParent() {
       .catch(console.error);
   }, []);
 
-  if (!articles.length) return <div>Loading...</div>;
-
   return (
     <Layout>
       <div id="article-list">
         <h1>blog</h1>
-        <ul id="blog-list">
-          {articles.map((article) => (
-            <li key={article.slug.current}>
-              <Link to={`/blog/${article.slug.current}`}>
-                <h2>{article.title}</h2>
-              </Link>
-              <p>{new Date(article.publishedAt).toISOString().slice(0, 10)}</p>
-              <p>{article.description}</p>
-            </li>
-          ))}
-        </ul>
+        {articles.length === 0 ? (
+          <div>Loading...</div>
+        ) : (
+          <ul id="blog-list">
+            {articles.map((article) => (
+              <li key={article.slug.current}>
+                <Link to={`/blog/${article.slug.current}`}>
+                  <h2>{article.title}</h2>
+                </Link>
+                <p>
+                  {new Date(article.publishedAt).toISOString().slice(0, 10)}
+                </p>
+                <p>{article.description}</p>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </Layout>
   );
