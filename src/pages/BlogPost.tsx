@@ -63,8 +63,6 @@ export default function BlogPost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!postData) return <div>Loading...</div>;
-
   return (
     <Layout>
       <article>
@@ -73,14 +71,20 @@ export default function BlogPost() {
             <button id="back-button" onClick={() => navigate("/blog")}>
               Close
             </button>
-            <h1>{postData.title}</h1>
-            <p>{new Date(postData.publishedAt).toDateString()}</p>
-            <BlockContent
-              blocks={postData.body}
-              serializers={serializers}
-              projectId="yourProjectId"
-              dataset="yourDataset"
-            />
+            {!postData ? (
+              <div>Loading...</div>
+            ) : (
+              <>
+                <h1>{postData.title}</h1>
+                <p>{new Date(postData.publishedAt).toDateString()}</p>
+                <BlockContent
+                  blocks={postData.body}
+                  serializers={serializers}
+                  projectId="yourProjectId"
+                  dataset="yourDataset"
+                />
+              </>
+            )}
           </div>
         </div>
       </article>
